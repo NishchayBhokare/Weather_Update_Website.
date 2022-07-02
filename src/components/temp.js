@@ -47,10 +47,11 @@ async function getWeatherInfo(){
     return (
         <>
 
+        <div style={{height:"100vh" , "margin-top":"50px"}}>
            {/* code for search bar*/}
             <div className="wrap">
 
-                <div className="search" style={{margin:"75px 0px 0px 0px"}}>
+                <div className="search" style={{padding:"75px 0px 0px 0px"}}>
                     <input type="search" value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} placeholder="Search..." autoFocus id="search" className='searchTerm' />
                     <button className="searchButton" onClick={getWeatherInfo} type='button'>Search</button>
                 </div>
@@ -59,6 +60,7 @@ async function getWeatherInfo(){
 
             {/* our weather card */}
            <WeatherCard tempInfo={tempInfo}/>
+        </div>
         </>
     )
 }
